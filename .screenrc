@@ -1,0 +1,46 @@
+# save contents to ~/.screenrc
+#apt-get install screen 
+#screen -S <session-name>
+#   will create new screen session with <session-name>
+#`d
+#   to exit
+#screen -x <session-name>
+#   to connect back with share mode
+#`c
+#   to create new window
+#`<number>
+#   to switch to <number>th window
+#``
+#   to toggle between windows
+#`A
+#   backspace to edit window name
+#`”
+#   to list all windows
+#`[?
+#   to enter copy-mode and search backwards
+
+
+escape `e
+
+# No bell at all
+vbell off
+
+# Change default scrollback value for new windows
+defscrollback 20000
+
+# Pretty status bar at the bottom
+caption always "%w"
+
+# Enable mouse scrolling and scroll bar history scrolling for screen
+termcapinfo xterm* ti@:te@
+#termcapinfo xterm 'hs:ts=\E]2;:fs=\007:ds=\E]2;screen\007:ti@:te@'
+bind p command -c paste_class
+bind -c paste_class 1 paste 1
+bind -c paste_class 2 paste 2
+bind -c paste_class 3 paste 3
+bind -c paste_class 4 paste 4
+bind -c paste_class 5 paste 5
+bind -c paste_class 6 paste 6
+bind -c paste_class 7 paste 7
+bind -c paste_class 8 paste 8
+bind -c paste_class 9 paste 9
